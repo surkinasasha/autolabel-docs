@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-requirements/functional" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.10.1">
+<title data-rh="true">Функциональные требования | AutoLabel Platform Docs</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://surkinasasha.github.io/autolabel-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://surkinasasha.github.io/autolabel-docs/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://surkinasasha.github.io/autolabel-docs/docs/requirements/functional"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Функциональные требования | AutoLabel Platform Docs"><meta data-rh="true" name="description" content="UC‑01: Создание проекта"><meta data-rh="true" property="og:description" content="UC‑01: Создание проекта"><link data-rh="true" rel="icon" href="/autolabel-docs/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://surkinasasha.github.io/autolabel-docs/docs/requirements/functional"><link data-rh="true" rel="alternate" href="https://surkinasasha.github.io/autolabel-docs/docs/requirements/functional" hreflang="en"><link data-rh="true" rel="alternate" href="https://surkinasasha.github.io/autolabel-docs/docs/requirements/functional" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Функциональные требования","item":"https://surkinasasha.github.io/autolabel-docs/docs/requirements/functional"}]}</script><script src="https://cdn.jsdelivr.net/npm/docusaurus-plugin-drawio/viewer.min.js"></script><link rel="stylesheet" href="/autolabel-docs/assets/css/styles.74378fb1.css">
+<script src="/autolabel-docs/assets/js/runtime~main.8c7c79ee.js" defer="defer"></script>
+<script src="/autolabel-docs/assets/js/main.87e51e2a.js" defer="defer"></script>
+</head>
+<body>
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/autolabel-docs/img/logo.svg"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/autolabel-docs/"><div class="navbar__logo"><img src="/autolabel-docs/img/logo.svg" alt="AutoLabel Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/autolabel-docs/img/logo.svg" alt="AutoLabel Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">AutoLabel Docs</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/autolabel-docs/docs/intro">Документация</a><a class="navbar__item navbar__link" href="/autolabel-docs/api/autolabel-api">API</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a href="https://github.com/surkinasasha/autolabel-docs" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/autolabel-docs/docs/intro"><span title="AutoLabel — умная разметка изображений" class="linkLabel_WmDU">AutoLabel — умная разметка изображений</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/autolabel-docs/docs/requirements/functional"><span title="Требования" class="categoryLinkLabel_W154">Требования</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/autolabel-docs/docs/requirements/functional"><span title="Функциональные требования" class="linkLabel_WmDU">Функциональные требования</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/autolabel-docs/docs/requirements/non-functional"><span title="Нефункциональные требования" class="linkLabel_WmDU">Нефункциональные требования</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/autolabel-docs/docs/db/data-model"><span title="База данных" class="categoryLinkLabel_W154">База данных</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/autolabel-docs/docs/api/api-reference"><span title="API" class="categoryLinkLabel_W154">API</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/autolabel-docs/docs/design/mockups"><span title="Дизайн" class="categoryLinkLabel_W154">Дизайн</span></a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/autolabel-docs/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">Требования</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Функциональные требования</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Функциональные требования</h1></header>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="uc01-создание-проекта">UC‑01: Создание проекта<a href="#uc01-создание-проекта" class="hash-link" aria-label="Direct link to UC‑01: Создание проекта" title="Direct link to UC‑01: Создание проекта" translate="no">​</a></h2>
+<p><strong>Акторы:</strong> авторизованный пользователь, система<br>
+<strong>Предусловия:</strong> пользователь авторизован и находится в рабочем пространстве</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="основной-поток">Основной поток<a href="#основной-поток" class="hash-link" aria-label="Direct link to Основной поток" title="Direct link to Основной поток" translate="no">​</a></h3>
+<ol>
+<li class="">Пользователь нажимает «Создать проект».</li>
+<li class="">Система отображает форму: название (3–50 симв.), описание (≤500), тип задачи, список классов.</li>
+<li class="">Пользователь заполняет поля и добавляет хотя бы один класс.</li>
+<li class="">Система проверяет:<!-- -->
+<ul>
+<li class="">название не пустое, не из пробелов, укладывается в лимит;</li>
+<li class="">описание (если есть) ≤ 500 символов;</li>
+<li class="">выбран тип задачи;</li>
+<li class="">название уникально в рабочем пространстве;</li>
+<li class="">не превышен лимит проектов (3 для бесплатной версии);</li>
+<li class="">список классов не пуст, названия уникальны.</li>
+</ul>
+</li>
+<li class="">При успешной проверке система создаёт проект, сохраняет в БД и открывает его страницу.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="альтернативный-поток-a1-отмена">Альтернативный поток A1 (отмена)<a href="#альтернативный-поток-a1-отмена" class="hash-link" aria-label="Direct link to Альтернативный поток A1 (отмена)" title="Direct link to Альтернативный поток A1 (отмена)" translate="no">​</a></h3>
+<ul>
+<li class="">Пользователь нажимает «Отмена» или закрывает форму.</li>
+<li class="">Система закрывает форму, возврат в рабочее пространство.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="исключительные-потоки">Исключительные потоки<a href="#исключительные-потоки" class="hash-link" aria-label="Direct link to Исключительные потоки" title="Direct link to Исключительные потоки" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>E1.</strong> Название не заполнено или состоит из пробелов.<br>
+<!-- -->Система подсвечивает поле и сообщает: «Название проекта является обязательным для заполнения».</li>
+<li class=""><strong>E2.</strong> Название вне лимитов (менее 3 или более 50 символов).<br>
+<!-- -->Сообщение: «Название проекта должно содержать от 3 до 50 символов».</li>
+<li class=""><strong>E3.</strong> Описание &gt; 500 символов.<br>
+<!-- -->Сообщение: «Описание проекта не должно превышать 500 символов».</li>
+<li class=""><strong>E4.</strong> Тип задачи не выбран.<br>
+<!-- -->Сообщение: «Необходимо выбрать тип задачи».</li>
+<li class=""><strong>E5.</strong> Проект с таким названием уже существует.<br>
+<!-- -->Сообщение: «Проект с таким названием уже существует в рабочем пространстве».</li>
+<li class=""><strong>E6.</strong> Достигнут лимит проектов (3 бесплатных).<br>
+<!-- -->Сообщение: «Лимит по проектам достигнут. В бесплатной версии можно создать не более 3 проектов».</li>
+<li class=""><strong>E7.</strong> Системная ошибка при создании.<br>
+<!-- -->Сообщение: «Не удалось создать проект из-за внутренней ошибки сервера. Попробуйте позже».</li>
+<li class=""><strong>E8.</strong> Список классов пуст.<br>
+<!-- -->Сообщение: «Необходимо добавить хотя бы один класс для разметки».</li>
+<li class=""><strong>E9.</strong> Названия классов дублируются или некорректны.<br>
+<!-- -->Сообщение: «Названия классов должны быть уникальными и содержать от 1 до 30 символов».</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="бизнес-правила">Бизнес-правила<a href="#бизнес-правила" class="hash-link" aria-label="Direct link to Бизнес-правила" title="Direct link to Бизнес-правила" translate="no">​</a></h3>
+<ul>
+<li class="">Название проекта уникально в пределах рабочего пространства.</li>
+<li class="">Тип задачи нельзя изменить после создания.</li>
+<li class="">Бесплатный тариф – до 3 проектов, платный – без ограничений.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="uc02-импорт-данных">UC‑02: Импорт данных<a href="#uc02-импорт-данных" class="hash-link" aria-label="Direct link to UC‑02: Импорт данных" title="Direct link to UC‑02: Импорт данных" translate="no">​</a></h2>
+<p><strong>Акторы:</strong> авторизованный пользователь, система<br>
+<strong>Предусловия:</strong> пользователь авторизован и открыл проект</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="основной-поток-1">Основной поток<a href="#основной-поток-1" class="hash-link" aria-label="Direct link to Основной поток" title="Direct link to Основной поток" translate="no">​</a></h3>
+<ol>
+<li class="">Пользователь нажимает «Загрузить данные».</li>
+<li class="">Система открывает область загрузки.</li>
+<li class="">Пользователь передаёт файлы (одиночные, папкой, drag‑and‑drop).</li>
+<li class="">Система проверяет:<!-- -->
+<ul>
+<li class="">формат (jpg, png, bmp, tiff, jpeg, webp);</li>
+<li class="">размер файла ≤ 50 МБ;</li>
+<li class="">файл не повреждён;</li>
+<li class="">общее количество с учётом уже загруженных не превышает лимит тарифа (2000 для бесплатной версии).</li>
+</ul>
+</li>
+<li class="">При успешной проверке начинается загрузка с отображением прогресса.</li>
+<li class="">Система уведомляет об успешной загрузке, помечает файлы как «неразмеченные».</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="альтернативный-поток-a1-отмена-1">Альтернативный поток A1 (отмена)<a href="#альтернативный-поток-a1-отмена-1" class="hash-link" aria-label="Direct link to Альтернативный поток A1 (отмена)" title="Direct link to Альтернативный поток A1 (отмена)" translate="no">​</a></h3>
+<ul>
+<li class="">Пользователь закрывает диалог выбора файлов.</li>
+<li class="">Система закрывает диалог, файлы не загружаются.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="исключительные-потоки-1">Исключительные потоки<a href="#исключительные-потоки-1" class="hash-link" aria-label="Direct link to Исключительные потоки" title="Direct link to Исключительные потоки" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>E1.</strong> Неподдерживаемый формат. Система отфильтровывает такие файлы и предупреждает.</li>
+<li class=""><strong>E2.</strong> Размер файла &gt; 50 МБ. Сообщение для каждого такого файла: «Файл [имя] слишком велик (макс. 50 МБ)».</li>
+<li class=""><strong>E3.</strong> Выбрана пустая папка. Сообщение: «В выбранном источнике не найдены подходящие изображения».</li>
+<li class=""><strong>E4.</strong> Системная ошибка при загрузке. Сообщение: «Произошла ошибка при загрузке файлов. Повторите позже».</li>
+<li class=""><strong>E5.</strong> Превышен лимит количества файлов для тарифа. Сообщение: «Превышен лимит количества файлов для текущего тарифа (максимум 2000 файлов)».</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="бизнес-правила-1">Бизнес-правила<a href="#бизнес-правила-1" class="hash-link" aria-label="Direct link to Бизнес-правила" title="Direct link to Бизнес-правила" translate="no">​</a></h3>
+<ul>
+<li class="">Структура вложенных папок не сохраняется – все изображения добавляются в общий датасет.</li>
+<li class="">Бесплатным пользователям доступно до 2 000 изображений.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="uc03-ручная-разметка-детекция">UC‑03: Ручная разметка (детекция)<a href="#uc03-ручная-разметка-детекция" class="hash-link" aria-label="Direct link to UC‑03: Ручная разметка (детекция)" title="Direct link to UC‑03: Ручная разметка (детекция)" translate="no">​</a></h2>
+<p><strong>Акторы:</strong> авторизованный пользователь, система<br>
+<strong>Предусловия:</strong> открыт проект с загруженными изображениями, тип задачи – детекция</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="основной-поток-2">Основной поток<a href="#основной-поток-2" class="hash-link" aria-label="Direct link to Основной поток" title="Direct link to Основной поток" translate="no">​</a></h3>
+<ol>
+<li class="">Пользователь выбирает изображение из галереи.</li>
+<li class="">Система открывает редактор разметки (панель классов, инструменты, масштаб, отмена/повтор).</li>
+<li class="">Пользователь выбирает класс.</li>
+<li class="">Пользователь создаёт Bounding Box (мышью): зажимает левую кнопку – тянет – отпускает.</li>
+<li class="">Система отображает прямоугольник с классом.</li>
+<li class="">Пользователь может корректировать (перемещать, изменять размер).</li>
+<li class="">Шаги 3–6 повторяются для всех объектов.</li>
+<li class="">Пользователь нажимает «Сохранить» или переходит к другому изображению (автосохранение).</li>
+<li class="">Система сохраняет аннотации и обновляет статус изображения на «размечено».</li>
+<li class="">Пользователь может перейти к следующему изображению.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="альтернативный-поток-a1-пропуск">Альтернативный поток A1 (пропуск)<a href="#альтернативный-поток-a1-пропуск" class="hash-link" aria-label="Direct link to Альтернативный поток A1 (пропуск)" title="Direct link to Альтернативный поток A1 (пропуск)" translate="no">​</a></h3>
+<ul>
+<li class="">Пользователь нажимает «Пропустить».</li>
+<li class="">Система помечает изображение как «неразмеченное» и возвращает к галерее.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="исключительный-поток-e1-ошибка-сохранения">Исключительный поток E1 (ошибка сохранения)<a href="#исключительный-поток-e1-ошибка-сохранения" class="hash-link" aria-label="Direct link to Исключительный поток E1 (ошибка сохранения)" title="Direct link to Исключительный поток E1 (ошибка сохранения)" translate="no">​</a></h3>
+<ul>
+<li class="">Сообщение: «Не удалось сохранить разметку. Попробуйте еще раз».</li>
+<li class="">Аннотация не сохраняется, пользователь остаётся в редакторе.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="uc04-ручная-разметка-сегментация">UC‑04: Ручная разметка (сегментация)<a href="#uc04-ручная-разметка-сегментация" class="hash-link" aria-label="Direct link to UC‑04: Ручная разметка (сегментация)" title="Direct link to UC‑04: Ручная разметка (сегментация)" translate="no">​</a></h2>
+<p><strong>Акторы:</strong> авторизованный пользователь, система<br>
+<strong>Предусловия:</strong> открыт проект с загруженными изображениями, тип задачи – сегментация</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="основной-поток-3">Основной поток<a href="#основной-поток-3" class="hash-link" aria-label="Direct link to Основной поток" title="Direct link to Основной поток" translate="no">​</a></h3>
+<ol>
+<li class="">Пользователь выбирает изображение из галереи.</li>
+<li class="">Система открывает редактор разметки (классы, кисть, ластик, заливка, масштаб, отмена).</li>
+<li class="">Пользователь выбирает класс.</li>
+<li class="">Пользователь создаёт маску: рисование кистью, лассо, заливка или умная сегментация по клику.</li>
+<li class="">Система отображает маску.</li>
+<li class="">Пользователь может корректировать маску.</li>
+<li class="">Шаги 3–6 повторяются для всех объектов.</li>
+<li class="">Пользователь нажимает «Сохранить» (или автосохранение при переходе).</li>
+<li class="">Система сохраняет маски и обновляет статус изображения на «размечено».</li>
+<li class="">Пользователь переходит к следующему изображению.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="альтернативный-поток-a1-пропуск-1">Альтернативный поток A1 (пропуск)<a href="#альтернативный-поток-a1-пропуск-1" class="hash-link" aria-label="Direct link to Альтернативный поток A1 (пропуск)" title="Direct link to Альтернативный поток A1 (пропуск)" translate="no">​</a></h3>
+<ul>
+<li class="">Пользователь нажимает «Пропустить».</li>
+<li class="">Система помечает изображение как «неразмеченное» и возвращает к галерее.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="исключительный-поток-e1-ошибка-сохранения-1">Исключительный поток E1 (ошибка сохранения)<a href="#исключительный-поток-e1-ошибка-сохранения-1" class="hash-link" aria-label="Direct link to Исключительный поток E1 (ошибка сохранения)" title="Direct link to Исключительный поток E1 (ошибка сохранения)" translate="no">​</a></h3>
+<ul>
+<li class="">Сообщение: «Не удалось сохранить разметку. Попробуйте еще раз».</li>
+<li class="">Аннотация не сохраняется, пользователь остаётся в редакторе.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="uc05-пакетная-автоматическая-разметка">UC‑05: Пакетная автоматическая разметка<a href="#uc05-пакетная-автоматическая-разметка" class="hash-link" aria-label="Direct link to UC‑05: Пакетная автоматическая разметка" title="Direct link to UC‑05: Пакетная автоматическая разметка" translate="no">​</a></h2>
+<p><strong>Акторы:</strong> авторизованный пользователь, система<br>
+<strong>Предусловия:</strong> открыт проект с загруженными изображениями, у пользователя активна подписка или доступны вычислительные лимиты</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="основной-поток-4">Основной поток<a href="#основной-поток-4" class="hash-link" aria-label="Direct link to Основной поток" title="Direct link to Основной поток" translate="no">​</a></h3>
+<ol>
+<li class="">Пользователь переходит в раздел «Авторазметка».</li>
+<li class="">Система отображает настройки:<!-- -->
+<ul>
+<li class="">выбор области обработки (все, неразмеченные, выбранные);</li>
+<li class="">информация о лимитах (осталось N изображений);</li>
+<li class="">поле для текстового промпта;</li>
+<li class="">кнопка «Запустить авторазметку».</li>
+</ul>
+</li>
+<li class="">Система проверяет:<!-- -->
+<ul>
+<li class="">выбрано хотя бы одно изображение;</li>
+<li class="">промпт заполнен;</li>
+<li class="">количество не превышает лимита.</li>
+</ul>
+</li>
+<li class="">Система запускает автоматическую детекцию или сегментацию в зависимости от типа задачи.</li>
+<li class="">Система уведомляет о завершении, показывает результаты, сортирует по уверенности и подсвечивает изображения с уверенностью &lt;50%.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="альтернативный-поток-a1-отмена-2">Альтернативный поток A1 (отмена)<a href="#альтернативный-поток-a1-отмена-2" class="hash-link" aria-label="Direct link to Альтернативный поток A1 (отмена)" title="Direct link to Альтернативный поток A1 (отмена)" translate="no">​</a></h3>
+<ul>
+<li class="">Пользователь нажимает «Отмена» до запуска.</li>
+<li class="">Система возвращается на страницу проекта без изменений.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="исключительные-потоки-2">Исключительные потоки<a href="#исключительные-потоки-2" class="hash-link" aria-label="Direct link to Исключительные потоки" title="Direct link to Исключительные потоки" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>E1.</strong> Изображения не выбраны. Сообщение: «Необходимо выбрать изображения».</li>
+<li class=""><strong>E2.</strong> Превышен лимит изображений. Сообщение: «Выбрано X изображений, но ваш лимит составляет Y. Пожалуйста, уменьшите выборку или перейдите на платный тариф».</li>
+<li class=""><strong>E3.</strong> Промпт не заполнен. Сообщение: «Необходимо ввести текстовый промпт».</li>
+<li class=""><strong>E4.</strong> GPU‑серверы недоступны. Сообщение: «Сервис авторазметки временно недоступен. Попробуйте позже». Пользователь может оставить задачу в очереди или отменить её.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="бизнес-правила-2">Бизнес-правила<a href="#бизнес-правила-2" class="hash-link" aria-label="Direct link to Бизнес-правила" title="Direct link to Бизнес-правила" translate="no">​</a></h3>
+<ul>
+<li class="">Для бесплатного тарифа — максимум 500 изображений для авторазметки в месяц.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="uc06-экспорт-размеченного-датасета">UC‑06: Экспорт размеченного датасета<a href="#uc06-экспорт-размеченного-датасета" class="hash-link" aria-label="Direct link to UC‑06: Экспорт размеченного датасета" title="Direct link to UC‑06: Экспорт размеченного датасета" translate="no">​</a></h2>
+<p><strong>Акторы:</strong> авторизованный пользователь, система<br>
+<strong>Предусловия:</strong> открыт проект, есть хотя бы одно размеченное изображение</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="основной-поток-5">Основной поток<a href="#основной-поток-5" class="hash-link" aria-label="Direct link to Основной поток" title="Direct link to Основной поток" translate="no">​</a></h3>
+<ol>
+<li class="">Пользователь нажимает «Экспорт».</li>
+<li class="">Система открывает окно настроек:<!-- -->
+<ul>
+<li class="">выбор формата аннотаций (COCO JSON, YOLO, Pascal VOC; для сегментации только COCO);</li>
+<li class="">информация о лимите выгрузок (осталось X из Y);</li>
+<li class="">выбор изображений (все / только размеченные);</li>
+<li class="">кнопка «Экспортировать».</li>
+</ul>
+</li>
+<li class="">Пользователь выбирает формат и фильтр, нажимает «Экспортировать».</li>
+<li class="">Система проверяет:<!-- -->
+<ul>
+<li class="">выбрано хотя бы одно изображение;</li>
+<li class="">лимит выгрузок не превышен.</li>
+</ul>
+</li>
+<li class="">Система формирует ZIP‑архив: изображения + аннотации + data.yaml.</li>
+<li class="">Система запускает скачивание архива и сообщает об успехе.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="альтернативный-поток-a1-отмена-3">Альтернативный поток A1 (отмена)<a href="#альтернативный-поток-a1-отмена-3" class="hash-link" aria-label="Direct link to Альтернативный поток A1 (отмена)" title="Direct link to Альтернативный поток A1 (отмена)" translate="no">​</a></h3>
+<ul>
+<li class="">Пользователь нажимает «Отмена» до запуска экспорта.</li>
+<li class="">Система закрывает окно, лимиты не списываются.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="исключительные-потоки-3">Исключительные потоки<a href="#исключительные-потоки-3" class="hash-link" aria-label="Direct link to Исключительные потоки" title="Direct link to Исключительные потоки" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>E1.</strong> Нет размеченных изображений. Сообщение: «Нет размеченных изображений для экспорта».</li>
+<li class=""><strong>E2.</strong> Лимит выгрузок исчерпан. Сообщение: «Месячный лимит экспорта исчерпан (5 из 5). Обновление лимита произойдет 1-го числа следующего месяца или при переходе на платный тариф».</li>
+<li class=""><strong>E3.</strong> Ошибка архивации. Сообщение: «Ошибка формирования архива. Пожалуйста, попробуйте еще раз позже». Лимит не списывается.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="бизнес-правила-3">Бизнес-правила<a href="#бизнес-правила-3" class="hash-link" aria-label="Direct link to Бизнес-правила" title="Direct link to Бизнес-правила" translate="no">​</a></h3>
+<ul>
+<li class="">Бесплатный тариф – не более 5 выгрузок датасета в месяц.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="uc07-выбор-и-оплата-тарифного-плана">UC‑07: Выбор и оплата тарифного плана<a href="#uc07-выбор-и-оплата-тарифного-плана" class="hash-link" aria-label="Direct link to UC‑07: Выбор и оплата тарифного плана" title="Direct link to UC‑07: Выбор и оплата тарифного плана" translate="no">​</a></h2>
+<p><strong>Акторы:</strong> авторизованный пользователь, система, внешняя платёжная система<br>
+<strong>Предусловия:</strong> пользователь авторизован</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="основной-поток-6">Основной поток<a href="#основной-поток-6" class="hash-link" aria-label="Direct link to Основной поток" title="Direct link to Основной поток" translate="no">​</a></h3>
+<ol>
+<li class="">Пользователь переходит в раздел «Тарифы».</li>
+<li class="">Система отображает тарифы («Бесплатный», «Профессиональный», «Корпоративный»), их стоимость и ограничения.</li>
+<li class="">Пользователь выбирает платный тариф и нажимает «Оформить подписку».</li>
+<li class="">Система перенаправляет на страницу оплаты.</li>
+<li class="">Пользователь вводит платёжные данные и подтверждает.</li>
+<li class="">Платёжная система обрабатывает транзакцию и возвращает статус.</li>
+<li class="">Система получает подтверждение оплаты.</li>
+<li class="">Система активирует тариф: обновляет лимиты, фиксирует дату окончания подписки.</li>
+<li class="">Система сообщает об успешной активации.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="альтернативный-поток-a1-отмена-автопродления">Альтернативный поток A1 (отмена автопродления)<a href="#альтернативный-поток-a1-отмена-автопродления" class="hash-link" aria-label="Direct link to Альтернативный поток A1 (отмена автопродления)" title="Direct link to Альтернативный поток A1 (отмена автопродления)" translate="no">​</a></h3>
+<ul>
+<li class="">Пользователь в настройках профиля нажимает «Отменить подписку».</li>
+<li class="">Система запрашивает подтверждение.</li>
+<li class="">После подтверждения статус подписки меняется на «Отменена, активна до [дата]». Лимиты сохраняются до окончания оплаченного периода.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="исключительный-поток-e1-ошибка-оплаты">Исключительный поток E1 (ошибка оплаты)<a href="#исключительный-поток-e1-ошибка-оплаты" class="hash-link" aria-label="Direct link to Исключительный поток E1 (ошибка оплаты)" title="Direct link to Исключительный поток E1 (ошибка оплаты)" translate="no">​</a></h3>
+<ul>
+<li class="">Платёжная система возвращает ошибку.</li>
+<li class="">Система отображает сообщение об ошибке. Подписка не активируется. Пользователь остаётся на странице оплаты для повторной попытки.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="бизнес-правила-4">Бизнес-правила<a href="#бизнес-правила-4" class="hash-link" aria-label="Direct link to Бизнес-правила" title="Direct link to Бизнес-правила" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>Даунгрейд:</strong> при окончании платной подписки и превышении лимитов (например, &gt;3 проектов) создание новых проектов и загрузка файлов блокируется до приведения к лимитам.</li>
+<li class="">При неоплате система пытается списать средства несколько раз, затем понижает тариф до Бесплатного.</li>
+</ul>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="uc08-управление-ролями">UC‑08: Управление ролями<a href="#uc08-управление-ролями" class="hash-link" aria-label="Direct link to UC‑08: Управление ролями" title="Direct link to UC‑08: Управление ролями" translate="no">​</a></h2>
+<p><strong>Акторы:</strong> авторизованный пользователь (создатель проекта), приглашённый пользователь, система<br>
+<strong>Предусловия:</strong> открыта страница проекта</p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="основной-поток-7">Основной поток<a href="#основной-поток-7" class="hash-link" aria-label="Direct link to Основной поток" title="Direct link to Основной поток" translate="no">​</a></h3>
+<ol>
+<li class="">Пользователь открывает настройки проекта → «Участники».</li>
+<li class="">Система показывает список участников с ролями (Администратор, Разметчик, Наблюдатель).</li>
+<li class="">Пользователь нажимает «Пригласить участника».</li>
+<li class="">Система открывает форму: поле email и выбор роли.</li>
+<li class="">Пользователь вводит email и выбирает роль.</li>
+<li class="">Система проверяет:<!-- -->
+<ul>
+<li class="">корректность email;</li>
+<li class="">не превышен лимит участников для тарифа;</li>
+<li class="">пользователь ещё не участник проекта и нет активного приглашения.</li>
+</ul>
+</li>
+<li class="">Если проверки пройдены, система создаёт приглашение и отправляет письмо со ссылкой.</li>
+<li class="">Приглашённый пользователь переходит по ссылке, авторизуется / регистрируется.</li>
+<li class="">Система добавляет его в проект с выбранной ролью.</li>
+<li class="">Администратор может изменить роль участника (выпадающий список → подтверждение).</li>
+<li class="">Администратор может удалить участника (кнопка «Исключить» → подтверждение). Участник теряет доступ.</li>
+</ol>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="альтернативный-поток-a1-самостоятельный-выход">Альтернативный поток A1 (самостоятельный выход)<a href="#альтернативный-поток-a1-самостоятельный-выход" class="hash-link" aria-label="Direct link to Альтернативный поток A1 (самостоятельный выход)" title="Direct link to Альтернативный поток A1 (самостоятельный выход)" translate="no">​</a></h3>
+<ul>
+<li class="">Участник (не владелец) может покинуть проект через настройки.</li>
+<li class="">Система удаляет его из списка участников.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="исключительные-потоки-4">Исключительные потоки<a href="#исключительные-потоки-4" class="hash-link" aria-label="Direct link to Исключительные потоки" title="Direct link to Исключительные потоки" translate="no">​</a></h3>
+<ul>
+<li class=""><strong>E1.</strong> Неверный формат email. Сообщение: «Введите корректный email‑адрес».</li>
+<li class=""><strong>E2.</strong> Превышение лимита участников. Сообщение: «Достигнут максимальный лимит участников для вашего тарифа. Чтобы пригласить больше участников, перейдите на другой тарифный план».</li>
+<li class=""><strong>E3.</strong> Пользователь уже участник проекта. Сообщение: «Пользователь с таким email уже является участником проекта или имеет активное приглашение».</li>
+<li class=""><strong>E4.</strong> Ошибка отправки email. Приглашение сохраняется в статусе «Ошибка отправки», владелец может повторить отправку позже.</li>
+</ul>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="бизнес-правила-5">Бизнес-правила<a href="#бизнес-правила-5" class="hash-link" aria-label="Direct link to Бизнес-правила" title="Direct link to Бизнес-правила" translate="no">​</a></h3>
+<ul>
+<li class="">Создатель проекта автоматически получает роль Администратора.</li>
+<li class="">Администратор может приглашать, исключать участников, менять роли, а также управлять настройками и экспортом.</li>
+<li class="">Разметчик может загружать, размечать (вручную и автоматически) изображения.</li>
+<li class="">Наблюдатель может только просматривать данные и аннотации.</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/surkinasasha/autolabel-docs/tree/main/docs/requirements/functional.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/autolabel-docs/docs/intro"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">AutoLabel — умная разметка изображений</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/autolabel-docs/docs/requirements/non-functional"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Нефункциональные требования</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#uc01-создание-проекта" class="table-of-contents__link toc-highlight">UC‑01: Создание проекта</a><ul><li><a href="#основной-поток" class="table-of-contents__link toc-highlight">Основной поток</a></li><li><a href="#альтернативный-поток-a1-отмена" class="table-of-contents__link toc-highlight">Альтернативный поток A1 (отмена)</a></li><li><a href="#исключительные-потоки" class="table-of-contents__link toc-highlight">Исключительные потоки</a></li><li><a href="#бизнес-правила" class="table-of-contents__link toc-highlight">Бизнес-правила</a></li></ul></li><li><a href="#uc02-импорт-данных" class="table-of-contents__link toc-highlight">UC‑02: Импорт данных</a><ul><li><a href="#основной-поток-1" class="table-of-contents__link toc-highlight">Основной поток</a></li><li><a href="#альтернативный-поток-a1-отмена-1" class="table-of-contents__link toc-highlight">Альтернативный поток A1 (отмена)</a></li><li><a href="#исключительные-потоки-1" class="table-of-contents__link toc-highlight">Исключительные потоки</a></li><li><a href="#бизнес-правила-1" class="table-of-contents__link toc-highlight">Бизнес-правила</a></li></ul></li><li><a href="#uc03-ручная-разметка-детекция" class="table-of-contents__link toc-highlight">UC‑03: Ручная разметка (детекция)</a><ul><li><a href="#основной-поток-2" class="table-of-contents__link toc-highlight">Основной поток</a></li><li><a href="#альтернативный-поток-a1-пропуск" class="table-of-contents__link toc-highlight">Альтернативный поток A1 (пропуск)</a></li><li><a href="#исключительный-поток-e1-ошибка-сохранения" class="table-of-contents__link toc-highlight">Исключительный поток E1 (ошибка сохранения)</a></li></ul></li><li><a href="#uc04-ручная-разметка-сегментация" class="table-of-contents__link toc-highlight">UC‑04: Ручная разметка (сегментация)</a><ul><li><a href="#основной-поток-3" class="table-of-contents__link toc-highlight">Основной поток</a></li><li><a href="#альтернативный-поток-a1-пропуск-1" class="table-of-contents__link toc-highlight">Альтернативный поток A1 (пропуск)</a></li><li><a href="#исключительный-поток-e1-ошибка-сохранения-1" class="table-of-contents__link toc-highlight">Исключительный поток E1 (ошибка сохранения)</a></li></ul></li><li><a href="#uc05-пакетная-автоматическая-разметка" class="table-of-contents__link toc-highlight">UC‑05: Пакетная автоматическая разметка</a><ul><li><a href="#основной-поток-4" class="table-of-contents__link toc-highlight">Основной поток</a></li><li><a href="#альтернативный-поток-a1-отмена-2" class="table-of-contents__link toc-highlight">Альтернативный поток A1 (отмена)</a></li><li><a href="#исключительные-потоки-2" class="table-of-contents__link toc-highlight">Исключительные потоки</a></li><li><a href="#бизнес-правила-2" class="table-of-contents__link toc-highlight">Бизнес-правила</a></li></ul></li><li><a href="#uc06-экспорт-размеченного-датасета" class="table-of-contents__link toc-highlight">UC‑06: Экспорт размеченного датасета</a><ul><li><a href="#основной-поток-5" class="table-of-contents__link toc-highlight">Основной поток</a></li><li><a href="#альтернативный-поток-a1-отмена-3" class="table-of-contents__link toc-highlight">Альтернативный поток A1 (отмена)</a></li><li><a href="#исключительные-потоки-3" class="table-of-contents__link toc-highlight">Исключительные потоки</a></li><li><a href="#бизнес-правила-3" class="table-of-contents__link toc-highlight">Бизнес-правила</a></li></ul></li><li><a href="#uc07-выбор-и-оплата-тарифного-плана" class="table-of-contents__link toc-highlight">UC‑07: Выбор и оплата тарифного плана</a><ul><li><a href="#основной-поток-6" class="table-of-contents__link toc-highlight">Основной поток</a></li><li><a href="#альтернативный-поток-a1-отмена-автопродления" class="table-of-contents__link toc-highlight">Альтернативный поток A1 (отмена автопродления)</a></li><li><a href="#исключительный-поток-e1-ошибка-оплаты" class="table-of-contents__link toc-highlight">Исключительный поток E1 (ошибка оплаты)</a></li><li><a href="#бизнес-правила-4" class="table-of-contents__link toc-highlight">Бизнес-правила</a></li></ul></li><li><a href="#uc08-управление-ролями" class="table-of-contents__link toc-highlight">UC‑08: Управление ролями</a><ul><li><a href="#основной-поток-7" class="table-of-contents__link toc-highlight">Основной поток</a></li><li><a href="#альтернативный-поток-a1-самостоятельный-выход" class="table-of-contents__link toc-highlight">Альтернативный поток A1 (самостоятельный выход)</a></li><li><a href="#исключительные-потоки-4" class="table-of-contents__link toc-highlight">Исключительные потоки</a></li><li><a href="#бизнес-правила-5" class="table-of-contents__link toc-highlight">Бизнес-правила</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 AutoLabel.</div></div></div></footer></div>
+</body>
+</html>
