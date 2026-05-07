@@ -1,0 +1,144 @@
+openapi: 3.0.3
+info:
+  title: Онлайн-сервис автоматической разметки изображений API
+  version: 1.0.0
+servers:
+  - url: https://api.annotation-tool.ru/v1
+
+paths:
+  /workspaces/{ws_id}/usage:
+    get:
+      summary: Получение статистики лимитов воркспейса
+      tags: [Workspace]
+      parameters:
+        - name: ws_id
+          in: path
+          required: true
+          description: ID рабочего пространства
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Объект со статистикой лимитов
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UsageResponse'
+
+  /workspaces/{ws_id}/projects:
+    get:
+      summary: Получение списка проектов воркспейса
+      tags: [Projects]
+      parameters:
+        - name: ws_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Массив проектов
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Project'
+
+  /projects/{p_id}/images:
+    get:
+      summary: Получение сетки изображений проекта
+      tags: [Images]
+      parameters:
+        - name: p_id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: page
+          in: query
+          description: Номер страницы для пагинации
+          schema:
+            type: integer
+            default: 1
+        - name: class
+          in: query
+          description: Фильтр по названию класса
+          schema:
+            type: string
+        - name: sort
+          in: query
+          description: Сортировка по дате
+          schema:
+            type: string
+            enum: [date]
+      responses:
+        '200':
+          description: Объект с пагинацией и массивом изображений
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImageGridResponse'
+
+components:
+  schemas:
+    UsageResponse:
+      type: object
+      properties:
+        plan_name:
+          type: string
+          enum: [FREE, PROFESSIONAL, CORPORATE, ACADEMIC]
+        usage:
+          type: object
+          properties:
+            projects:
+              type: object
+              properties:
+                current: { type: integer, example: 3 }
+                max: { type: integer, example: 3 }
+            images:
+              type: object
+              properties:
+                current: { type: integer, example: 1600 }
+                max: { type: integer, example: 2000 }
+
+    Project:
+      type: object
+      properties:
+        id: { type: string, format: uuid }
+        name: { type: string, example: "Мой проект2" }
+        task_type:
+          type: string
+          enum: [DETECTION, SEGMENTATION]
+        classes:
+          type: array
+          items:
+            type: object
+            properties:
+              name: { type: string }
+              color: { type: string }
+        progress:
+          type: object
+          properties:
+            labeled: { type: integer }
+            total: { type: integer }
+
+    ImageGridResponse:
+      type: object
+      properties:
+        total_count: { type: integer }
+        page_count: { type: integer }
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Image'
+
+    Image:
+      type: object
+      properties:
+        id: { type: string }
+        url: { type: string, format: uri }
+        status:
+          type: string
+          enum: [NEW, LABELED, AUTO_LABELED]
